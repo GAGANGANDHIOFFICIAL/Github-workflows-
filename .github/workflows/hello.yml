@@ -8,7 +8,7 @@ on:
 jobs:
    
   greet:
-    runs-on : ubuntu latest
+    runs-on : ubuntu-latest
     steps:
      - name: say helo to gg sir.
        run: echo "Gagan is a good guy"
