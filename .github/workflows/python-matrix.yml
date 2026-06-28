@@ -1,0 +1,29 @@
+name : python-lint
+
+on: 
+    push:
+        branches: [main]
+
+jobs:
+    # Write a name of the job 
+    vaalidate:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: code checkout 
+              uses: actions/checkout@v4 
+
+            - name: setup python 
+              uses: actions/setup-python@v5 
+              with:
+                python version: "3.14"
+
+            - name: check dependencies
+              run: pip install requirements.txt
+
+            - name: run  flake8
+              run: flake8 app.py
+
+    
+    
+
