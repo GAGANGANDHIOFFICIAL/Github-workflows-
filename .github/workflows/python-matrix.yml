@@ -9,6 +9,10 @@ jobs:
     # Write a name of the job 
     vaalidate:
         runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                python-version: ["3.9","3.10","3.11","3.12","3.13"]
 
         steps:
             - name: code checkout 
@@ -17,7 +21,7 @@ jobs:
             - name: setup python 
               uses: actions/setup-python@v5 
               with:
-                python version: "3.14"
+                python version: ${{ matrix.python-version }}
 
             - name: check dependencies
               run: pip install -r requirements.txt
