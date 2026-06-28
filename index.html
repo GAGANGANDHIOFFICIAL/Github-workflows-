@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gagan Gandhi | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- ICON CDN (WORKS ALWAYS) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+
+body{
+  background:linear-gradient(-45deg,#ff6a00,#ee0979,#00c6ff,#0072ff);
+  background-size:400% 400%;
+  animation:bg 12s infinite;
+  color:white;
+}
+
+@keyframes bg{
+  0%{background-position:0%}
+  50%{background-position:100%}
+  100%{background-position:0%}
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  backdrop-filter:blur(12px);
+  background:rgba(0,0,0,0.3);
+}
+
+nav a{
+  color:white;
+  margin-left:20px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+nav a:hover{color:#ffd700}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:70px;
+  padding:0 10%;
+}
+
+.hero img{
+  width:260px;
+  border-radius:50%;
+  border:6px solid white;
+  box-shadow:0 0 40px rgba(255,255,255,0.7);
+}
+
+.hero h1{font-size:52px}
+
+.hero p{opacity:0.9}
+
+/* ICON BUTTONS */
+.social{
+  margin-top:25px;
+}
+
+.social a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  margin-right:15px;
+  font-size:24px;
+  color:white;
+  transition:.3s;
+}
+
+/* COLORS */
+.github{background:#000}
+.linkedin{background:#0077b5}
+.leetcode{background:#ffa116}
+.resume{background:#16a34a}
+
+.social a:hover{
+  transform:scale(1.2);
+  box-shadow:0 0 20px white;
+}
+
+/* SECTION */
+section{padding:100px 10%}
+
+.card{
+  background:rgba(255,255,255,0.2);
+  backdrop-filter:blur(20px);
+  padding:35px;
+  border-radius:20px;
+}
+
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:20px;
+}
+
+.skill{
+  background:white;
+  color:#333;
+  padding:18px;
+  border-radius:14px;
+  text-align:center;
+  font-weight:600;
+  transition:.3s;
+}
+
+.skill:hover{
+  transform:translateY(-8px);
+  background:#ffd700;
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.project{
+  background:white;
+  color:black;
+  border-radius:16px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.project img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.project:hover{
+  transform:scale(1.05);
+}
+
+.project-content{padding:20px}
+
+footer{text-align:center;padding:40px}
+
+@media(max-width:900px){
+  .hero{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <b>Gagan Gandhi</b>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+  <!-- PUT YOUR PHOTO -->
+  <img src="gagan.jpg" alt="profile">
+
+  <div>
+    <h1>Gagan Gandhi</h1>
+    <p>MERN Developer • 150+ LeetCode • CSE</p>
+
+    <!-- ICONS -->
+    <div class="social">
+
+      <a href="https://github.com/GAGANGANDHIOFFICIAL" target="_blank" class="github">
+        <i class="fa-brands fa-github"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/gagan-gandhi-b01748261/" target="_blank" class="linkedin">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+
+      <a href="https://leetcode.com/u/gagan4080/" target="_blank" class="leetcode">
+        <i class="fa-solid fa-code"></i>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="card">
+    <h2>About Me</h2>
+
+    <p>
+      I'm <b>Gagan Gandhi</b>, a Computer Science Engineering student passionate about 
+      building scalable web applications and cloud-ready systems.  
+      I work primarily with the <b>MERN stack</b> and have solved 150+ problems on LeetCode, 
+      strengthening my data structures and algorithms foundation.
+    </p>
+
+    <br>
+
+    <p>
+      Along with development, I am actively expanding into <b>DevOps and Cloud Engineering</b>.  
+      I regularly work with:
+    </p>
+
+    <ul style="margin-top:10px; line-height:1.8;">
+      <li>🐧 Linux system administration and terminal workflows</li>
+      <li>🐳 Docker containerization and deployment</li>
+      <li>☁️ AWS services (EC2, S3, basic cloud deployment)</li>
+      <li>📊 Monitoring using Grafana & Prometheus</li>
+      <li>⚙️ Backend development with Node.js & Express</li>
+    </ul>
+
+    <br>
+
+    <p>
+      My goal is to become a strong software engineer who understands both 
+      <b>development and infrastructure</b>, enabling me to build and deploy 
+      production-ready applications efficiently.
+    </p>
+  </div>
+</section>
+<!-- SKILLS -->
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="skills">
+
+    <!-- FRONTEND -->
+    <div class="skill"><i class="fa-brands fa-html5"></i><br>HTML</div>
+    <div class="skill"><i class="fa-brands fa-css3-alt"></i><br>CSS</div>
+    <div class="skill"><i class="fa-brands fa-js"></i><br>JavaScript</div>
+    <div class="skill"><i class="fa-brands fa-react"></i><br>React</div>
+
+    <!-- BACKEND -->
+    <div class="skill"><i class="fa-brands fa-node"></i><br>Node.js</div>
+    <div class="skill"><i class="fa-solid fa-database"></i><br>MongoDB</div>
+    <div class="skill"><i class="fa-solid fa-server"></i><br>Express</div>
+
+    <!-- DSA -->
+    <div class="skill"><i class="fa-solid fa-code"></i><br>DSA</div>
+    <div class="skill"><i class="fa-brands fa-java"></i><br>Java</div>
+
+    <!-- DEVOPS -->
+    <div class="skill"><i class="fa-brands fa-linux"></i><br>Linux</div>
+    <div class="skill"><i class="fa-brands fa-docker"></i><br>Docker</div>
+    <div class="skill"><i class="fa-brands fa-aws"></i><br>AWS</div>
+    <div class="skill"><i class="fa-solid fa-chart-line"></i><br>Grafana</div>
+    <div class="skill"><i class="fa-solid fa-fire"></i><br>Prometheus</div>
+
+    <!-- TOOLS -->
+    <div class="skill"><i class="fa-brands fa-git-alt"></i><br>Git</div>
+    <div class="skill"><i class="fa-brands fa-github"></i><br>GitHub</div>
+
+  </div>
+</section>
+
+
+<!-- PROJECTS -->
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="projects">
+
+    <!-- PROJECT 1 -->
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1557821552-17105176677c">
+
+      <div class="project-content">
+        <h3>Revora E-commerce</h3>
+        <p>MERN stack shopping website with authentication and UI.</p>
+
+        <!-- GITHUB BUTTON -->
+        <a href="https://github.com/GAGANGANDHIOFFICIAL/Zerodha-Clone" target="_blank" class="git-btn">
+          <i class="fa-brands fa-github"></i> View Code
+        </a>
+      </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267">
+
+      <div class="project-content">
+        <h3>Airbnb Clone</h3>
+        <p>Hotel booking platform using React, Node, Express & MongoDB.</p>
+
+        <!-- GITHUB BUTTON -->
+        <a href="https://github.com/GAGANGANDHIOFFICIAL/Airbnb-Clone" target="_blank" class="git-btn">
+          <i class="fa-brands fa-github"></i> View Code
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<footer>
+  © 2026 Gagan Gandhi
+</footer>
+
+</body>
+</html>

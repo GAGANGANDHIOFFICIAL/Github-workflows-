@@ -1,0 +1,35 @@
+# Name of the workflow.
+
+name: portfolio 
+
+on:
+    push:
+        branches : [main]
+
+
+
+
+permissions: 
+    pages: write 
+    id-token: write 
+jobs:
+    
+    cloning-code:
+        runs-on : ubuntu-latest
+        environment:
+            name: github-actions
+            url: ${{steps.deployment.outputs.page_url}}
+
+        steps:
+            #getting access to yur portfolio code via pre build github actions.
+            #clone or checkout the code where it is written 
+            - name: Here we will be cloning the html portfolio code.
+              uses: actions/checkout@v4
+            # Setting up Github pages 
+            - name: setup github pages.
+              uses: actions/configure-github-pages@v4 
+            # static code artifacts 
+            - name: upload static files 
+              uses: actions/upload-paages-artifacts@v4 
+            - name: deploy to github pages 
+              uses: actions/deploy-pages@v4 
