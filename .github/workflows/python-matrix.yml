@@ -3,6 +3,7 @@ name : python-lint
 on: 
     push:
         branches: [main]
+    workflow_dispatch:
 
 jobs:
     # Write a name of the job 
