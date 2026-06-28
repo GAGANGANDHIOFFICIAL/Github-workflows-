@@ -1,0 +1,14 @@
+# This is going to be our first workflows.
+# now writing the name of the workflows
+
+name: hello GG 
+on: 
+  push:
+    branches: [main]
+jobs:
+   
+  greet:
+    runs-on : ubuntu latest
+    steps:
+     - name: say helo to gg sir.
+       run: echo "Gagan is a good guy"
